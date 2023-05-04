@@ -1,14 +1,23 @@
 package com.devsuperior.product.entities;
 
-public class Product {
+import jakarta.persistence.*;
+import org.hibernate.annotations.Table;
+
+@Entity
+@Table(name = "tb_product")
+public final class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private Double price;
 
+    @ManyToOne
+    @JoinColumn(name = "department_id")
     private Department department;
 
     public Product() {
-
     }
 
     public Product(Long id, String name, Double price, Department department) {
