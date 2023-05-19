@@ -1,11 +1,13 @@
 package com.devsuperior.product.entities;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.Table;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_product")
-public final class Product {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,19 +15,11 @@ public final class Product {
     private String name;
     private Double price;
 
-    @ManyToOne
-    @JoinColumn(name = "department_id")
-    private Department department;
-
-    public Product() {
-    }
-
-    public Product(Long id, String name, Double price, Department department) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.department = department;
-    }
+    @ManyToMany
+    @JoinTable(name = "tb_product_category",
+        joinColumns = @JoinColumn(name = "product_id"),
+        inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private Set<Category> categories = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -51,11 +45,7 @@ public final class Product {
         this.price = price;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
+    public Set<Category> getCategories() {
+        return categories;
     }
 }
