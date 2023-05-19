@@ -38,7 +38,7 @@ Pré-requisitos: Java 11 ou 17
 git clone https://github.com/... (por o nome do seu repositório local e o nome do autor)
 
 ## Entrar na pasta do projeto Back-end
-cd backend
+cd back-end
 
 ## Executar o projeto
 ./mvnw spring-boot:run
