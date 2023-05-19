@@ -2,7 +2,7 @@
 
 Praticando os meus projetos[^1].
 
-#Tecnologia utilizada
+# Tecnologia utilizada
 
 ## Back-end
 - Java
@@ -10,7 +10,7 @@ Praticando os meus projetos[^1].
 - Jpa/Hibernate
 - Maven
 
-##Front-end (Vou fazer assim que possível: com imagens)
+## Front-end (Vou fazer assim que possível: com imagens)
 - HTML
 - CSS
 - JS
@@ -27,12 +27,12 @@ Este projeto foi feito na linguagem Java na IDE IntelliJ.
 . Front-end and Web
 . Banco de dados Postgresql ou H2
 
-7. Java [(Vou acrescentar depois)]( https://github.com/)
+Detalhes com o link [(Vou acrescentar depois)]( https://github.com/)
 
 # _*Como executar o projeto*_
 
 ## Back-end
-Pré-requisitos: Java 11 ou 17. 1
+Pré-requisitos: Java 11 ou 17
 
 ## Clonar repositório
 git clone https://github.com/... (por o nome do seu repositório local e o nome do autor)
@@ -40,7 +40,7 @@ git clone https://github.com/... (por o nome do seu repositório local e o nome 
 ## Entrar na pasta do projeto Back-end
 cd backend
 
-##Executar o projeto
+## Executar o projeto
 ./mvnw spring-boot:run
 
 ## _*Front-end Web*_
